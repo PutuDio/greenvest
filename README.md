@@ -1,3 +1,4 @@
+````md
 # GreenVest 🌱
 
 > **Sustainable Investment Platform** — Investasi cerdas yang menguntungkan sekaligus berdampak positif bagi bumi.
@@ -20,10 +21,10 @@ Landing page ini dirancang dengan pendekatan visual **eco-premium modern** — m
 
 Project ini dibuat menggunakan:
 
-- **HTML5**
-- **Tailwind CSS CDN**
-- **Custom CSS**
-- **Vanilla JavaScript**
+- HTML5
+- Tailwind CSS CDN
+- Custom CSS
+- Vanilla JavaScript
 
 Tanpa framework frontend tambahan dan tanpa build process.
 
@@ -168,68 +169,91 @@ FAQ
 CTA Banner
    ↓
 Footer
+````
 
 Setiap section memiliki tujuan komunikasi yang spesifik.
 
-🎨 Design Decisions
-Aspek	Keputusan	Alasan
-Style	Eco-premium modern	Trust + sustainability
-Primary Color	Forest & Emerald	Natural + fintech feel
-Accent	Soft Gold	Premium touch
-Typography	Fraunces + Plus Jakarta Sans	Elegant + readable
-Hero Layout	Split layout dashboard	Visual trust
-Animation	Smooth fade-up	Modern experience
-Button Style	Rounded-xl + glow	Friendly CTA
-Navbar	Glassmorphism sticky	Premium interaction
+---
 
-🎨 Color Palette
-Nama	Hex	Fungsi
-Forest 900	#0B2016	Background utama
-Forest 700	#1A3D28	Surface dark
-Emerald 600	#1DB870	CTA utama
-Emerald 500	#3DC98C	Accent
-Cream 50	#FDFAF4	Background terang
-Gold 500	#C9A030	Premium accent
-Gray Text	#6B7280	Secondary text
+## 🎨 Design Decisions
 
-🛠️ Tech Stack
-Teknologi	Penggunaan
-HTML5	Struktur semantik halaman
-Tailwind CSS CDN	Utility styling
-Custom CSS	Animation, glassmorphism, custom UI
-Vanilla JavaScript	Modal, FAQ, mobile menu
-Google Fonts	Fraunces + Plus Jakarta Sans
-CSS Grid & Flexbox	Responsive layout
-CSS Transitions	Hover & scroll animation
+| Aspek         | Keputusan                    | Alasan                 |
+| ------------- | ---------------------------- | ---------------------- |
+| Style         | Eco-premium modern           | Trust + sustainability |
+| Primary Color | Forest & Emerald             | Natural + fintech feel |
+| Accent        | Soft Gold                    | Premium touch          |
+| Typography    | Fraunces + Plus Jakarta Sans | Elegant + readable     |
+| Hero Layout   | Split layout dashboard       | Visual trust           |
+| Animation     | Smooth fade-up               | Modern experience      |
+| Button Style  | Rounded-xl + glow            | Friendly CTA           |
+| Navbar        | Glassmorphism sticky         | Premium interaction    |
 
-✨ Fitur Utama Landing Page
-🌱 ESG investment branding modern
-📊 Interactive portfolio dashboard preview
-✨ Scroll fade-up animation
-💳 Pricing section modern
-📱 Fully responsive layout
-📌 Sticky glassmorphism navbar
-❓ Interactive FAQ accordion
-🔐 Authentication modal
-📈 Metrics & impact visualization
-🎨 Bento-style features layout
-🌿 Sustainable finance visual identity
-📈 Nilai Portfolio
+---
 
-Tingkat kesulitan: ⭐⭐⭐⭐ Menengah-Tinggi
+## 🎨 Color Palette
 
-Nilai untuk recruiter: 🟢🟢🟢🟢🟢 5/5 — Sangat Tinggi
+| Nama        | Hex       | Fungsi            |
+| ----------- | --------- | ----------------- |
+| Forest 900  | `#0B2016` | Background utama  |
+| Forest 700  | `#1A3D28` | Surface dark      |
+| Emerald 600 | `#1DB870` | CTA utama         |
+| Emerald 500 | `#3DC98C` | Accent            |
+| Cream 50    | `#FDFAF4` | Background terang |
+| Gold 500    | `#C9A030` | Premium accent    |
+| Gray Text   | `#6B7280` | Secondary text    |
+
+---
+
+## 🛠️ Tech Stack
+
+| Teknologi          | Penggunaan                          |
+| ------------------ | ----------------------------------- |
+| HTML5              | Struktur semantik halaman           |
+| Tailwind CSS CDN   | Utility styling                     |
+| Custom CSS         | Animation, glassmorphism, custom UI |
+| Vanilla JavaScript | Modal, FAQ, mobile menu             |
+| Google Fonts       | Fraunces + Plus Jakarta Sans        |
+| CSS Grid & Flexbox | Responsive layout                   |
+| CSS Transitions    | Hover & scroll animation            |
+
+---
+
+## ✨ Fitur Utama Landing Page
+
+* 🌱 ESG investment branding modern
+* 📊 Interactive portfolio dashboard preview
+* ✨ Scroll fade-up animation
+* 💳 Pricing section modern
+* 📱 Fully responsive layout
+* 📌 Sticky glassmorphism navbar
+* ❓ Interactive FAQ accordion
+* 🔐 Authentication modal
+* 📈 Metrics & impact visualization
+* 🎨 Bento-style features layout
+* 🌿 Sustainable finance visual identity
+
+---
+
+## 📈 Nilai Portfolio
+
+**Tingkat kesulitan:** ⭐⭐⭐⭐ Menengah-Tinggi
+
+**Nilai untuk recruiter:** 🟢🟢🟢🟢🟢 5/5 — Sangat Tinggi
 
 Kenapa project ini bernilai tinggi:
 
-Menunjukkan kemampuan membuat landing page modern tanpa framework
-Memiliki design consistency yang kuat
-Menampilkan kemampuan UI/UX modern
-Menggunakan struktur conversion funnel yang jelas
-Memiliki interaksi frontend yang clean
-Cocok untuk portfolio fintech / SaaS / startup
+* Menunjukkan kemampuan membuat landing page modern tanpa framework
+* Memiliki design consistency yang kuat
+* Menampilkan kemampuan UI/UX modern
+* Menggunakan struktur conversion funnel yang jelas
+* Memiliki interaksi frontend yang clean
+* Cocok untuk portfolio fintech / SaaS / startup
 
-🚀 Cara Menjalankan
+---
+
+## 🚀 Cara Menjalankan
+
+```bash
 # Clone repository
 git clone https://github.com/username/greenvest.git
 
@@ -240,58 +264,84 @@ cd greenvest
 open greenvest.html
 
 # atau gunakan Live Server VS Code
+```
 
 Tidak membutuhkan:
 
-npm install
-build tools
-framework setup
+* npm install
+* build tools
+* framework setup
 
 Langsung jalan di browser.
 
-📁 Struktur File
+---
+
+## 📁 Struktur File
+
+```txt
 greenvest/
-├── greenvest.html     # Struktur utama landing page
-├── greenvest.css      # Styling & animation
-├── greenvest.js       # Interaction & modal logic
-├── preview.png        # Screenshot project
-└── README.md          # Dokumentasi project
-🌐 Live Demo
+├── greenvest.html
+├── greenvest.css
+├── greenvest.js
+├── preview.png
+└── README.md
+```
 
-🔗 Lihat Live Demo
+---
 
-💡 Pelajaran dari Project Ini
-Visual trust sangat penting dalam produk finansial
-Sustainable branding bisa dibuat modern dan premium
-Tailwind + custom CSS sangat powerful untuk landing page
-Vanilla JavaScript masih sangat cukup untuk interaction modern
-Hierarki section menentukan conversion rate landing page
+## 🌐 Live Demo
 
-📚 Inspirasi & Referensi
-Brand	Inspirasi
-Stripe	Fintech layout
-Linear	Minimal interaction
-Notion	Clean spacing
-Apple	Typography hierarchy
-Ramp	Modern SaaS UI
+[🔗 Lihat Live Demo](#)
 
-👤 Developer
-Putu Dio
 
-🌐 Portfolio: 
-💼 LinkedIn: 
+---
 
-⭐ Penutup
+## 💡 Pelajaran dari Project Ini
+
+1. Visual trust sangat penting dalam produk finansial
+2. Sustainable branding bisa dibuat modern dan premium
+3. Tailwind + custom CSS sangat powerful untuk landing page
+4. Vanilla JavaScript masih sangat cukup untuk interaction modern
+5. Hierarki section menentukan conversion rate landing page
+
+---
+
+## 📚 Inspirasi & Referensi
+
+| Brand  | Inspirasi            |
+| ------ | -------------------- |
+| Stripe | Fintech layout       |
+| Linear | Minimal interaction  |
+| Notion | Clean spacing        |
+| Apple  | Typography hierarchy |
+| Ramp   | Modern SaaS UI       |
+
+---
+
+## 👤 Developer
+
+**Putu Dio**
+
+* 🌐 Portfolio: 
+* 💼 LinkedIn: 
+
+
+---
+
+## ⭐ Penutup
 
 GreenVest bukan hanya sekadar landing page fintech biasa.
 
 Project ini dirancang untuk menunjukkan bagaimana:
 
-visual design,
-frontend interaction,
-conversion strategy,
-dan branding
+* visual design,
+* frontend interaction,
+* conversion strategy,
+* dan branding
 
 dapat digabungkan menjadi pengalaman web modern yang terasa profesional, terpercaya, dan memorable.
 
 Jika project ini membantu atau menginspirasi, jangan lupa ⭐ repository ini.
+
+```
+```

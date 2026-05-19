@@ -1,0 +1,161 @@
+/* ===========================
+   GreenVest — Stylesheet
+   =========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fdfaf4;
+  color: #1a2e1f;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Typography ---------- */
+.gradient-text {
+  background: linear-gradient(135deg, #0b2016 0%, #1db870 60%, #c9a030 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-light {
+  background: rgba(253, 250, 244, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(26, 46, 31, 0.07);
+}
+
+/* ---------- Background Pattern ---------- */
+.leaf-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(29, 184, 112, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 32px 32px;
+}
+
+/* ---------- Cards ---------- */
+.card-hover {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(26, 46, 31, 0.12);
+}
+
+.bento-card {
+  background: #fff;
+  border: 1px solid rgba(26, 46, 31, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(26, 46, 31, 0.1);
+}
+
+/* ---------- Scroll Animations ---------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-1 {
+  transition-delay: 0.12s;
+}
+.delay-2 {
+  transition-delay: 0.24s;
+}
+.delay-3 {
+  transition-delay: 0.36s;
+}
+
+/* ---------- Mobile Menu ---------- */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.mobile-menu.open {
+  max-height: 340px;
+}
+
+/* ---------- FAQ ---------- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-answer.open {
+  max-height: 280px;
+}
+.faq-icon {
+  transition: transform 0.25s ease;
+  font-size: 1.25rem;
+}
+.faq-icon.open {
+  transform: rotate(45deg);
+  color: #1db870;
+}
+
+/* ---------- Buttons ---------- */
+.btn-glow {
+  box-shadow: 0 4px 20px rgba(29, 184, 112, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 8px 32px rgba(29, 184, 112, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-panel {
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+.modal-backdrop.open .modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f4e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #3dc98c;
+  border-radius: 3px;
+}

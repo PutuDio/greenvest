@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GreenVest — Platform investasi ESG & sustainable finance."
+    />
+    <title>GreenVest — Sustainable Investment Platform</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                900: "#0B2016",
+                800: "#112A1C",
+                700: "#1A3D28",
+                600: "#24573A",
+              },
+              emerald: {
+                400: "#5FD9A8",
+                500: "#3DC98C",
+                600: "#1DB870",
+                700: "#18A062",
+              },
+              cream: { 50: "#FDFAF4", 100: "#F9F4E8", 200: "#F0E8CC" },
+              gold: { 400: "#E0B84A", 500: "#C9A030", 600: "#B08820" },
+            },
+            fontFamily: {
+              fraunces: ["Fraunces", "serif"],
+              jakarta: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="greenvest.css" />
+  </head>
+  <body>
+    <nav class="navbar-light fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between"
+      >
+        <a href="#top" class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded-lg bg-forest-800 flex items-center justify-center"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 13C8 13 3 10 3 6.5C3 4.6 5.2 3 8 6C10.8 3 13 4.6 13 6.5C13 10 8 13 8 13Z"
+                fill="#3DC98C"
+              />
+            </svg>
+          </div>
+          <span class="font-fraunces font-semibold text-lg text-forest-900"
+            >GreenVest</span
+          >
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="#features"
+            class="text-sm text-gray-500 hover:text-forest-800"
+            >Features</a
+          >
+          <a
+            href="#howitworks"
+            class="text-sm text-gray-500 hover:text-forest-800"
+            >Cara Kerja</a
+          >
+          <a href="#pricing" class="text-sm text-gray-500 hover:text-forest-800"
+            >Pricing</a
+          >
+          <a href="#faq" class="text-sm text-gray-500 hover:text-forest-800"
+            >FAQ</a
+          >
+        </div>
+
+        <div class="hidden md:flex items-center gap-3">
+          <button
+            type="button"
+            class="text-sm text-gray-500 hover:text-forest-800"
+            onclick="openModal('login')"
+          >
+            Masuk
+          </button>
+          <button
+            type="button"
+            class="text-sm bg-forest-800 hover:bg-forest-700 text-white px-5 py-2.5 rounded-lg font-medium btn-glow"
+            onclick="openModal('register')"
+          >
+            Mulai Investasi
+          </button>
+        </div>
+
+        <button
+          id="menu-toggle"
+          class="md:hidden p-2 text-gray-500 hover:text-forest-800"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+        >
+          <svg
+            id="icon-open"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path d="M3 6h16M3 11h16M3 16h16" />
+          </svg>
+          <svg
+            id="icon-close"
+            class="hidden"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path d="M5 5l12 12M17 5L5 17" />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden border-t border-black/5"
+      >
+        <div class="px-5 py-4 flex flex-col gap-4 bg-cream-50">
+          <a
+            href="#features"
+            class="text-sm text-gray-500"
+            onclick="closeMenu()"
+            >Features</a
+          >
+          <a
+            href="#howitworks"
+            class="text-sm text-gray-500"
+            onclick="closeMenu()"
+            >Cara Kerja</a
+          >
+          <a href="#pricing" class="text-sm text-gray-500" onclick="closeMenu()"
+            >Pricing</a
+          >
+          <a href="#faq" class="text-sm text-gray-500" onclick="closeMenu()"
+            >FAQ</a
+          >
+          <div class="pt-2 border-t border-black/5 flex gap-3">
+            <button
+              type="button"
+              class="text-sm text-gray-500"
+              onclick="
+                closeMenu();
+                openModal('login');
+              "
+            >
+              Masuk
+            </button>
+            <button
+              type="button"
+              class="text-sm bg-forest-800 text-white px-4 py-2 rounded-lg"
+              onclick="
+                closeMenu();
+                openModal('register');
+              "
+            >
+              Mulai Investasi
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section
+        class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden leaf-pattern"
+      >
+        <div
+          class="absolute top-20 right-0 w-80 h-80 bg-emerald-400/15 rounded-full blur-3xl pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-10 left-10 w-64 h-64 bg-gold-400/12 rounded-full blur-3xl pointer-events-none"
+        ></div>
+        <div
+          class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center relative z-10"
+        >
+          <div class="fade-up">
+            <div
+              class="inline-flex items-center gap-2 bg-white border border-emerald-500/20 rounded-full px-4 py-1.5 mb-7 shadow-sm"
+            >
+              <span
+                class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"
+              ></span>
+              <span class="text-xs font-medium text-forest-700"
+                >Platform ESG #1 di Indonesia</span
+              >
+            </div>
+            <h1 class="font-fraunces font-bold leading-tight mb-6">
+              <span class="block text-5xl md:text-6xl text-forest-900"
+                >Investasi yang</span
+              >
+              <em class="block text-5xl md:text-6xl gradient-text not-italic"
+                >menguntungkan</em
+              >
+              <span class="block text-5xl md:text-6xl text-forest-900"
+                >&amp; ramah bumi.</span
+              >
+            </h1>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8 max-w-lg">
+              GreenVest menggabungkan
+              <strong class="text-forest-800 font-semibold">ESG scoring</strong>
+              dan
+              <strong class="text-forest-800 font-semibold"
+                >AI recommendation</strong
+              >
+              untuk membantu kamu berinvestasi di aset yang menguntungkan
+              sekaligus berdampak positif bagi lingkungan.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+              <button
+                type="button"
+                class="w-full sm:w-auto bg-forest-800 hover:bg-forest-700 text-white font-semibold px-7 py-4 rounded-xl text-sm btn-glow"
+                onclick="openModal('register')"
+              >
+                Mulai Gratis — Tanpa Kartu Kredit
+              </button>
+              <a
+                href="#howitworks"
+                class="w-full sm:w-auto text-center border border-forest-800/20 text-forest-800 font-medium px-7 py-4 rounded-xl text-sm hover:bg-forest-800/5 transition-all"
+                >Lihat Cara Kerja →</a
+              >
+            </div>
+            <div class="flex flex-wrap items-center gap-5">
+              <div class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="text-gold-400">✦</span> OJK Terdaftar
+              </div>
+              <div class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="text-emerald-500">✦</span> Data Terenkripsi
+              </div>
+              <div class="flex items-center gap-2 text-sm text-gray-400">
+                <span class="text-emerald-500">✦</span> ISO 27001 Certified
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="fade-up"
+            role="img"
+            aria-label="Preview dashboard GreenVest"
+          >
+            <div
+              class="bg-white rounded-2xl shadow-2xl border border-black/6 overflow-hidden"
+              style="box-shadow: 0 24px 64px rgba(11, 32, 22, 0.14)"
+            >
+              <div
+                class="px-5 py-4 border-b border-black/5 flex items-center justify-between bg-cream-50"
+              >
+                <div>
+                  <p class="text-xs text-gray-400 font-medium">
+                    Portofolio Kamu
+                  </p>
+                  <p
+                    class="font-fraunces font-semibold text-xl text-forest-900"
+                  >
+                    Rp 48.750.000
+                  </p>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs text-gray-400">Return YTD</p>
+                  <p class="text-emerald-600 font-semibold text-base">+18.4%</p>
+                </div>
+              </div>
+              <div class="px-5 pt-5 pb-3">
+                <div class="grid grid-cols-6 gap-2 items-end h-28">
+                  <div class="h-10 bg-emerald-100 rounded-t-md"></div>
+                  <div class="h-14 bg-emerald-200 rounded-t-md"></div>
+                  <div class="h-12 bg-emerald-300 rounded-t-md"></div>
+                  <div class="h-20 bg-emerald-400 rounded-t-md"></div>
+                  <div class="h-18 bg-emerald-500 rounded-t-md"></div>
+                  <div class="h-24 bg-forest-700 rounded-t-md"></div>
+                </div>
+              </div>
+              <div class="px-5 py-4 border-t border-black/5">
+                <p class="text-xs text-gray-400 mb-3 font-medium">
+                  ESG Score Portofolio
+                </p>
+                <div class="grid grid-cols-3 gap-3">
+                  <div
+                    class="bg-emerald-50 border border-emerald-100 rounded-xl p-3 text-center"
+                  >
+                    <p class="font-fraunces font-bold text-xl text-emerald-700">
+                      A+
+                    </p>
+                    <p class="text-xs text-gray-400 mt-0.5">Environment</p>
+                  </div>
+                  <div
+                    class="bg-blue-50 border border-blue-100 rounded-xl p-3 text-center"
+                  >
+                    <p class="font-fraunces font-bold text-xl text-blue-700">
+                      B+
+                    </p>
+                    <p class="text-xs text-gray-400 mt-0.5">Social</p>
+                  </div>
+                  <div
+                    class="bg-gold-400/10 border border-gold-400/20 rounded-xl p-3 text-center"
+                  >
+                    <p class="font-fraunces font-bold text-xl text-gold-600">
+                      A
+                    </p>
+                    <p class="text-xs text-gray-400 mt-0.5">Governance</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-5 py-4 border-t border-black/5 flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-xs text-gray-400"
+                    >CO₂ offset:
+                    <strong class="text-forest-800">2.4 ton</strong> tahun
+                    ini</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="text-xs text-emerald-600 font-medium hover:underline"
+                  onclick="openModal('login')"
+                >
+                  Lihat detail →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-forest-900">
+        <div
+          class="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+        >
+          <div class="fade-up">
+            <p class="font-fraunces text-4xl font-bold text-white mb-1">
+              Rp 2.1T
+            </p>
+            <p class="text-emerald-400 text-sm">Total dana dikelola</p>
+          </div>
+          <div class="fade-up delay-1">
+            <p class="font-fraunces text-4xl font-bold text-white mb-1">87K+</p>
+            <p class="text-emerald-400 text-sm">Investor aktif</p>
+          </div>
+          <div class="fade-up delay-2">
+            <p class="font-fraunces text-4xl font-bold text-white mb-1">24%</p>
+            <p class="text-emerald-400 text-sm">Avg. return per tahun</p>
+          </div>
+          <div class="fade-up delay-3">
+            <p class="font-fraunces text-4xl font-bold text-white mb-1">
+              18K ton
+            </p>
+            <p class="text-emerald-400 text-sm">CO₂ berhasil di-offset</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-24">
+        <div class="max-w-6xl mx-auto px-5">
+          <div class="text-center mb-16 fade-up">
+            <span
+              class="text-emerald-600 text-sm font-semibold uppercase tracking-widest"
+              >Features</span
+            >
+            <h2
+              class="font-fraunces text-4xl md:text-5xl font-bold text-forest-900 mt-3 mb-5 leading-tight"
+            >
+              Investasi cerdas dengan<br /><em class="not-italic gradient-text"
+                >teknologi terdepan</em
+              >
+            </h2>
+            <p class="text-gray-500 text-lg max-w-xl mx-auto">
+              Gabungan AI, data ESG real-time, dan analisis risiko otomatis —
+              semua dalam satu platform yang mudah digunakan.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bento-card rounded-2xl p-7 md:col-span-2 fade-up">
+              <div
+                class="w-11 h-11 rounded-xl bg-emerald-100 flex items-center justify-center mb-5"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  stroke="#1DB870"
+                  stroke-width="1.6"
+                >
+                  <path
+                    d="M11 2l2.5 7h7.5l-6 4.5 2.5 7L11 16l-6.5 4.5 2.5-7L1 9h7.5L11 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-fraunces font-bold text-xl text-forest-900 mb-3">
+                AI Portfolio Recommendation
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Algoritma AI kami menganalisis lebih dari 500 indikator ESG dan
+                finansial untuk merekomendasikan alokasi portofolio yang optimal
+                sesuai profil risiko dan tujuan investasi kamu — secara otomatis
+                dan real-time.
+              </p>
+              <div class="bg-cream-100 rounded-xl p-4 border border-black/5">
+                <p class="text-xs text-gray-400 mb-3 font-medium">
+                  Rekomendasi AI hari ini
+                </p>
+                <div class="space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                      <div
+                        class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-xs font-bold"
+                      >
+                        G
+                      </div>
+                      <div>
+                        <p class="text-xs font-semibold text-forest-900">
+                          Green Energy ETF
+                        </p>
+                        <p class="text-xs text-gray-400">ESG: A+ · Risk: Low</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs font-semibold text-emerald-600">
+                        +22.4%
+                      </p>
+                      <p class="text-xs text-gray-400">YTD</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                      <div
+                        class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs font-bold"
+                      >
+                        S
+                      </div>
+                      <div>
+                        <p class="text-xs font-semibold text-forest-900">
+                          Solar Infrastructure
+                        </p>
+                        <p class="text-xs text-gray-400">ESG: A · Risk: Med</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs font-semibold text-emerald-600">
+                        +18.1%
+                      </p>
+                      <p class="text-xs text-gray-400">YTD</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card rounded-2xl p-7 fade-up delay-1">
+              <div
+                class="w-11 h-11 rounded-xl bg-gold-400/15 flex items-center justify-center mb-5"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  stroke="#C9A030"
+                  stroke-width="1.6"
+                >
+                  <circle cx="11" cy="11" r="9" />
+                  <path d="M11 7v4l3 3" />
+                </svg>
+              </div>
+              <h3 class="font-fraunces font-bold text-xl text-forest-900 mb-3">
+                ESG Score Real-time
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Pantau skor ESG setiap aset investasimu secara real-time. Data
+                diperbarui setiap hari dari 200+ sumber terpercaya global.
+              </p>
+            </div>
+
+            <div class="bento-card rounded-2xl p-7 fade-up">
+              <div
+                class="w-11 h-11 rounded-xl bg-emerald-100 flex items-center justify-center mb-5"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  stroke="#1DB870"
+                  stroke-width="1.6"
+                >
+                  <path
+                    d="M12 3C12 3 7 7 7 12.5C7 15.5 9.2 18 12 18S17 15.5 17 12.5C17 7 12 3 12 3Z"
+                  />
+                  <path d="M12 18v1" />
+                </svg>
+              </div>
+              <h3 class="font-fraunces font-bold text-xl text-forest-900 mb-3">
+                Impact Tracker
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Lihat dampak nyata investasi kamu: berapa ton CO₂ yang
+                di-offset, berapa pohon yang didanai, dan energi terbarukan yang
+                dihasilkan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="howitworks"
+        class="py-24 bg-forest-900 relative overflow-hidden"
+      >
+        <div class="absolute inset-0 leaf-pattern opacity-20"></div>
+        <div class="max-w-6xl mx-auto px-5 relative">
+          <div class="text-center mb-16 fade-up">
+            <span
+              class="text-emerald-400 text-sm font-semibold uppercase tracking-widest"
+              >Cara Kerja</span
+            >
+            <h2
+              class="font-fraunces text-4xl md:text-5xl font-bold text-white mt-3 mb-5"
+            >
+              Mulai investasi dalam<br />3 langkah
+            </h2>
+            <p class="text-emerald-200/60 text-lg max-w-lg mx-auto">
+              Tidak perlu jadi ahli keuangan. GreenVest memandu kamu dari awal
+              hingga portofolio terbentuk.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center fade-up">
+              <div
+                class="w-16 h-16 rounded-2xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-6"
+              >
+                <span class="font-fraunces font-bold text-2xl text-emerald-400"
+                  >01</span
+                >
+              </div>
+              <h3 class="font-fraunces font-semibold text-lg text-white mb-3">
+                Buat profil investor
+              </h3>
+              <p
+                class="text-emerald-200/50 text-sm leading-relaxed max-w-xs mx-auto"
+              >
+                Jawab 5 pertanyaan singkat tentang tujuan finansial dan
+                toleransi risiko kamu. Hanya 2 menit.
+              </p>
+            </div>
+            <div class="text-center fade-up delay-1">
+              <div
+                class="w-16 h-16 rounded-2xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-6"
+              >
+                <span class="font-fraunces font-bold text-2xl text-emerald-400"
+                  >02</span
+                >
+              </div>
+              <h3 class="font-fraunces font-semibold text-lg text-white mb-3">
+                Terima rekomendasi AI
+              </h3>
+              <p
+                class="text-emerald-200/50 text-sm leading-relaxed max-w-xs mx-auto"
+              >
+                AI kami langsung merekomendasikan alokasi portofolio ESG yang
+                optimal berdasarkan profil kamu.
+              </p>
+            </div>
+            <div class="text-center fade-up delay-2">
+              <div
+                class="w-16 h-16 rounded-2xl bg-gold-400/15 border border-gold-400/25 flex items-center justify-center mx-auto mb-6"
+              >
+                <span class="font-fraunces font-bold text-2xl text-gold-400"
+                  >03</span
+                >
+              </div>
+              <h3 class="font-fraunces font-semibold text-lg text-white mb-3">
+                Pantau &amp; tumbuh
+              </h3>
+              <p
+                class="text-emerald-200/50 text-sm leading-relaxed max-w-xs mx-auto"
+              >
+                Monitor performa, impact lingkungan, dan ESG score portofolio
+                kamu secara real-time dari dashboard.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="py-24 bg-cream-100">
+        <div class="max-w-6xl mx-auto px-5">
+          <div class="text-center mb-16 fade-up">
+            <span
+              class="text-emerald-600 text-sm font-semibold uppercase tracking-widest"
+              >Pricing</span
+            >
+            <h2
+              class="font-fraunces text-4xl md:text-5xl font-bold text-forest-900 mt-3 mb-5"
+            >
+              Investasi tanpa biaya tersembunyi
+            </h2>
+            <p class="text-gray-500 text-lg max-w-xl mx-auto">
+              Transparansi adalah nilai utama kami — termasuk dalam hal biaya
+              platform.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div
+              class="card-hover bg-white rounded-2xl p-7 border border-black/6 fade-up"
+            >
+              <p class="text-gray-500 text-sm font-medium mb-1">Starter</p>
+              <div class="flex items-end gap-1 mb-1">
+                <span class="font-fraunces text-5xl font-bold text-forest-900"
+                  >Gratis</span
+                >
+              </div>
+              <p class="text-gray-400 text-sm mb-7">Selamanya gratis</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">Investasi hingga Rp 5 juta</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">5 aset ESG tersedia</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">Dashboard basic</span>
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="block w-full text-center border-2 border-forest-900/15 text-forest-800 font-semibold py-3.5 rounded-xl hover:border-forest-800/40 transition-all text-sm"
+                onclick="openModal('register')"
+              >
+                Mulai Gratis
+              </button>
+            </div>
+
+            <div
+              class="card-hover rounded-2xl p-7 relative fade-up delay-1"
+              style="
+                box-shadow: 0 24px 60px rgba(11, 32, 22, 0.25);
+                background: linear-gradient(160deg, #112a1c 0%, #1a3d28 100%);
+              "
+            >
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                <span
+                  class="bg-emerald-500 text-white text-xs font-semibold px-5 py-1.5 rounded-full"
+                  >✦ Paling Populer</span
+                >
+              </div>
+              <p class="text-emerald-400 text-sm font-medium mb-1">
+                Pro Investor
+              </p>
+              <div class="flex items-end gap-1 mb-1">
+                <span class="font-fraunces text-5xl font-bold text-white"
+                  >Rp 99K</span
+                ><span class="text-emerald-300/60 text-sm mb-2">/bln</span>
+              </div>
+              <p class="text-emerald-300/50 text-sm mb-7">
+                Ditagih tahunan — hemat 25%
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-400 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-emerald-100">Investasi unlimited</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-400 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-emerald-100">200+ aset ESG tersedia</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-400 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-emerald-100"
+                    >AI Portfolio Recommendation</span
+                  >
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-400 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-emerald-100">Impact Tracker penuh</span>
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-white font-semibold py-3.5 rounded-xl transition-all text-sm btn-glow"
+                onclick="openModal('register')"
+              >
+                Coba 30 Hari Gratis
+              </button>
+            </div>
+
+            <div
+              class="card-hover bg-white rounded-2xl p-7 border border-black/6 fade-up delay-2"
+            >
+              <p class="text-gray-500 text-sm font-medium mb-1">
+                Wealth Manager
+              </p>
+              <div class="flex items-end gap-1 mb-1">
+                <span class="font-fraunces text-5xl font-bold text-forest-900"
+                  >Custom</span
+                >
+              </div>
+              <p class="text-gray-400 text-sm mb-7">
+                Untuk institusi &amp; family office
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">Semua fitur Pro</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">Dedicated account manager</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm">
+                  <span class="text-emerald-500 flex-shrink-0 mt-0.5 font-bold"
+                    >✓</span
+                  ><span class="text-gray-600">Custom ESG reporting</span>
+                </li>
+              </ul>
+              <button
+                type="button"
+                class="block w-full text-center border-2 border-forest-900/15 text-forest-800 font-semibold py-3.5 rounded-xl hover:border-forest-800/40 transition-all text-sm"
+                onclick="openModal('contact')"
+              >
+                Hubungi Sales →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="py-24">
+        <div class="max-w-3xl mx-auto px-5">
+          <div class="text-center mb-16 fade-up">
+            <span
+              class="text-emerald-600 text-sm font-semibold uppercase tracking-widest"
+              >FAQ</span
+            >
+            <h2
+              class="font-fraunces text-4xl font-bold text-forest-900 mt-3 mb-5"
+            >
+              Pertanyaan umum
+            </h2>
+            <p class="text-gray-500">
+              Ada pertanyaan lain?
+              <button
+                type="button"
+                class="text-emerald-600 hover:underline font-medium"
+                onclick="openModal('contact')"
+              >
+                Hubungi tim kami.
+              </button>
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div
+              class="bg-white rounded-xl border border-black/6 overflow-hidden"
+            >
+              <button
+                class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                onclick="toggleFaq(this)"
+                aria-expanded="false"
+              >
+                <span class="font-medium text-forest-900 text-sm"
+                  >Apakah GreenVest sudah terdaftar di OJK?</span
+                ><span class="faq-icon flex-shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="text-gray-500 text-sm leading-relaxed px-6 pb-5">
+                  Ya, GreenVest terdaftar dan diawasi OJK sebagai platform
+                  investasi berbasis teknologi. Dana investor disimpan di
+                  rekening terpisah (segregated account) yang dilindungi penuh.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl border border-black/6 overflow-hidden"
+            >
+              <button
+                class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                onclick="toggleFaq(this)"
+                aria-expanded="false"
+              >
+                <span class="font-medium text-forest-900 text-sm"
+                  >Berapa minimum investasi di GreenVest?</span
+                ><span class="faq-icon flex-shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="text-gray-500 text-sm leading-relaxed px-6 pb-5">
+                  Minimum investasi di GreenVest hanya Rp 10.000. Kami percaya
+                  investasi berkelanjutan harus bisa diakses oleh semua
+                  kalangan.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl border border-black/6 overflow-hidden"
+            >
+              <button
+                class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                onclick="toggleFaq(this)"
+                aria-expanded="false"
+              >
+                <span class="font-medium text-forest-900 text-sm"
+                  >Apa itu ESG score dan mengapa penting?</span
+                ><span class="faq-icon flex-shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="text-gray-500 text-sm leading-relaxed px-6 pb-5">
+                  ESG adalah Environmental, Social, dan Governance. ESG score
+                  membantu menilai seberapa bertanggung jawab sebuah perusahaan
+                  pada tiga aspek tersebut.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl border border-black/6 overflow-hidden"
+            >
+              <button
+                class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                onclick="toggleFaq(this)"
+                aria-expanded="false"
+              >
+                <span class="font-medium text-forest-900 text-sm"
+                  >Kapan saya bisa mencairkan investasi?</span
+                ><span class="faq-icon flex-shrink-0">+</span>
+              </button>
+              <div class="faq-answer">
+                <p class="text-gray-500 text-sm leading-relaxed px-6 pb-5">
+                  Pencairan dana bisa dilakukan kapan saja. Untuk sebagian besar
+                  instrumen, proses berlangsung 1–3 hari kerja.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 px-5 bg-forest-900 relative overflow-hidden">
+        <div class="absolute inset-0 leaf-pattern opacity-20"></div>
+        <div class="max-w-3xl mx-auto text-center relative fade-up">
+          <div
+            class="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-7"
+          >
+            <span
+              class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"
+            ></span>
+            <span class="text-xs font-medium text-emerald-400"
+              >Bergabung dengan 87.000+ investor</span
+            >
+          </div>
+          <h2
+            class="font-fraunces text-4xl md:text-5xl font-bold text-white mb-5 leading-tight"
+          >
+            Mulai investasi yang<br /><em class="not-italic text-emerald-400"
+              >bermakna</em
+            >
+            hari ini.
+          </h2>
+          <p
+            class="text-emerald-200/60 text-lg mb-8 max-w-xl mx-auto leading-relaxed"
+          >
+            Raih return optimal sekaligus berkontribusi nyata untuk lingkungan.
+            Daftar gratis dalam 2 menit.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
+          >
+            <button
+              type="button"
+              class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-4 rounded-xl btn-glow text-sm"
+              onclick="openModal('register')"
+            >
+              Mulai Gratis Sekarang →
+            </button>
+            <button
+              type="button"
+              class="w-full sm:w-auto border border-white/15 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/8 text-sm"
+              onclick="openModal('login')"
+            >
+              Pelajari lebih lanjut
+            </button>
+          </div>
+          <p class="text-emerald-300/40 text-sm">
+            ✓ Gratis selamanya &nbsp;·&nbsp; ✓ OJK Terdaftar &nbsp;·&nbsp; ✓
+            Dana dijamin aman
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-forest-900 border-t border-white/5 py-14 px-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-5 gap-10 mb-12">
+          <div class="md:col-span-2">
+            <a href="#top" class="flex items-center gap-2 mb-5">
+              <div
+                class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center"
+              >
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M8 13C8 13 3 10 3 6.5C3 4.6 5.2 3 8 6C10.8 3 13 4.6 13 6.5C13 10 8 13 8 13Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <span class="font-fraunces font-semibold text-white"
+                >GreenVest</span
+              >
+            </a>
+            <p
+              class="text-emerald-200/40 text-sm leading-relaxed max-w-xs mb-5"
+            >
+              Platform investasi ESG pertama di Indonesia yang menggabungkan
+              profit dan dampak lingkungan positif.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-white mb-4">Platform</p>
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#features"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >API</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-white mb-4">Perusahaan</p>
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-white mb-4">Legal</p>
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-emerald-200/40 hover:text-emerald-200"
+                  >Syarat &amp; Ketentuan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/5 pt-7 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <p class="text-emerald-200/30 text-sm">
+            © 2025 PT GreenVest Teknologi Indonesia. Terdaftar di OJK.
+          </p>
+          <p
+            class="text-emerald-200/20 text-xs max-w-sm text-center md:text-right"
+          >
+            Investasi mengandung risiko. Kinerja masa lalu tidak menjamin hasil
+            di masa depan.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="auth-modal"
+      class="modal-backdrop fixed inset-0 z-[60] bg-black/50 flex items-center justify-center p-4"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-panel w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden border border-black/5"
+      >
+        <div
+          class="flex items-center justify-between px-6 py-5 border-b border-black/5 bg-cream-50"
+        >
+          <div>
+            <p
+              id="modal-kicker"
+              class="text-xs uppercase tracking-widest text-emerald-600 font-semibold"
+            >
+              Masuk
+            </p>
+            <h3
+              id="modal-title"
+              class="font-fraunces text-2xl font-bold text-forest-900 mt-1"
+            >
+              Selamat datang kembali
+            </h3>
+          </div>
+          <button
+            type="button"
+            class="w-10 h-10 rounded-full hover:bg-black/5 text-gray-500"
+            aria-label="Close modal"
+            onclick="closeModal()"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="px-6 py-6">
+          <div class="flex gap-2 mb-5 bg-cream-100 p-1 rounded-2xl">
+            <button
+              id="tab-login"
+              type="button"
+              class="flex-1 py-2.5 rounded-xl text-sm font-semibold bg-white text-forest-900 shadow-sm"
+              onclick="switchAuthMode('login')"
+            >
+              Masuk
+            </button>
+            <button
+              id="tab-register"
+              type="button"
+              class="flex-1 py-2.5 rounded-xl text-sm font-semibold text-gray-500"
+              onclick="switchAuthMode('register')"
+            >
+              Daftar
+            </button>
+            <button
+              id="tab-contact"
+              type="button"
+              class="flex-1 py-2.5 rounded-xl text-sm font-semibold text-gray-500"
+              onclick="switchAuthMode('contact')"
+            >
+              Sales
+            </button>
+          </div>
+
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label
+                for="login-email"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Email / username</label
+              >
+              <input
+                id="login-email"
+                name="email"
+                type="text"
+                placeholder="nama@email.com"
+                class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+              />
+            </div>
+            <div>
+              <label
+                for="login-password"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Password</label
+              >
+              <div class="relative">
+                <input
+                  id="login-password"
+                  name="password"
+                  type="password"
+                  placeholder="••••••••"
+                  class="w-full rounded-xl border border-black/10 px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+                />
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-0 px-4 text-sm text-gray-500"
+                  onclick="togglePassword('login-password', this)"
+                >
+                  Show
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <label class="inline-flex items-center gap-2 text-gray-500">
+                <input
+                  type="checkbox"
+                  class="rounded border-black/20 text-emerald-600 focus:ring-emerald-500"
+                />
+                Ingat saya
+              </label>
+              <button
+                type="button"
+                class="text-emerald-600 hover:underline"
+                onclick="showNotice('reset')"
+              >
+                Lupa password?
+              </button>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-forest-800 text-white font-semibold py-3.5 rounded-xl btn-glow hover:bg-forest-700"
+            >
+              Masuk
+            </button>
+          </form>
+
+          <form id="register-form" class="space-y-4 hidden">
+            <div>
+              <label
+                for="register-name"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Nama lengkap</label
+              >
+              <input
+                id="register-name"
+                type="text"
+                placeholder="Nama kamu"
+                class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+              />
+            </div>
+            <div>
+              <label
+                for="register-email"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Email</label
+              >
+              <input
+                id="register-email"
+                type="email"
+                placeholder="nama@email.com"
+                class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+              />
+            </div>
+            <div>
+              <label
+                for="register-password"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Password</label
+              >
+              <div class="relative">
+                <input
+                  id="register-password"
+                  type="password"
+                  placeholder="Minimal 8 karakter"
+                  class="w-full rounded-xl border border-black/10 px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+                />
+                <button
+                  type="button"
+                  class="absolute inset-y-0 right-0 px-4 text-sm text-gray-500"
+                  onclick="togglePassword('register-password', this)"
+                >
+                  Show
+                </button>
+              </div>
+            </div>
+            <div class="text-xs text-gray-500 leading-relaxed">
+              Dengan mendaftar, kamu menyetujui Syarat &amp; Ketentuan serta
+              Kebijakan Privasi GreenVest.
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-emerald-500 text-white font-semibold py-3.5 rounded-xl btn-glow hover:bg-emerald-400"
+            >
+              Daftar gratis
+            </button>
+          </form>
+
+          <form id="contact-form" class="space-y-4 hidden">
+            <div>
+              <label
+                for="contact-name"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Nama</label
+              >
+              <input
+                id="contact-name"
+                type="text"
+                placeholder="Nama kamu"
+                class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+              />
+            </div>
+            <div>
+              <label
+                for="contact-message"
+                class="block text-sm font-medium text-forest-900 mb-2"
+                >Pesan</label
+              >
+              <textarea
+                id="contact-message"
+                rows="4"
+                placeholder="Tulis kebutuhan kamu..."
+                class="w-full rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-forest-800 text-white font-semibold py-3.5 rounded-xl btn-glow hover:bg-forest-700"
+            >
+              Kirim pesan
+            </button>
+          </form>
+
+          <div
+            id="modal-message"
+            class="mt-4 hidden rounded-xl border px-4 py-3 text-sm"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="greenvest.js"></script>
+  </body>
+</html>

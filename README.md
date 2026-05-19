@@ -1,4 +1,3 @@
-````md
 # GreenVest 🌱
 
 > **Sustainable Investment Platform** — Investasi cerdas yang menguntungkan sekaligus berdampak positif bagi bumi.
@@ -21,10 +20,10 @@ Landing page ini dirancang dengan pendekatan visual **eco-premium modern** — m
 
 Project ini dibuat menggunakan:
 
-- HTML5
-- Tailwind CSS CDN
-- Custom CSS
-- Vanilla JavaScript
+- **HTML5**
+- **Tailwind CSS CDN**
+- **Custom CSS**
+- **Vanilla JavaScript**
 
 Tanpa framework frontend tambahan dan tanpa build process.
 

@@ -290,7 +290,7 @@ greenvest/
 
 ## 🌐 Live Demo
 
-[🔗 Lihat Live Demo](#)
+[🔗 [Lihat Live Demo](https://greenvest-lovat.vercel.app/)](#)
 
 
 ---

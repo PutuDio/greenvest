@@ -1,4 +1,4 @@
-# GreenVest 🌱
+# GreenVest
 
 > **Sustainable Investment Platform** — Investasi cerdas yang menguntungkan sekaligus berdampak positif bagi bumi.
 

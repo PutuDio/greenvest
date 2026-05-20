@@ -233,23 +233,6 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ---
 
-## 📈 Nilai Portfolio
-
-**Tingkat kesulitan:** ⭐⭐⭐⭐ Menengah-Tinggi
-
-**Nilai untuk recruiter:** 🟢🟢🟢🟢🟢 5/5 — Sangat Tinggi
-
-Kenapa project ini bernilai tinggi:
-
-* Menunjukkan kemampuan membuat landing page modern tanpa framework
-* Memiliki design consistency yang kuat
-* Menampilkan kemampuan UI/UX modern
-* Menggunakan struktur conversion funnel yang jelas
-* Memiliki interaksi frontend yang clean
-* Cocok untuk portfolio fintech / SaaS / startup
-
----
-
 ## 🚀 Cara Menjalankan
 
 ```bash
@@ -319,10 +302,11 @@ greenvest/
 
 ## 👤 Developer
 
-**Putu Dio**
+**Putu Dio** - Web Developer
 
-* 🌐 Portfolio: 
-* 💼 LinkedIn: 
+- 🌐 Portfolio: [Coming Soon](#)
+- 💼 LinkedIn: [[linkedin.com/in/putudiokenneta](https://www.linkedin.com/in/putu-dio-kenneta-09818440b/)]
+- 🐙 GitHub: [[github.com/PutuDio](https://github.com/PutuDio)]
 
 
 ---

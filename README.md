@@ -218,6 +218,18 @@ greenvest/
 - 💼 LinkedIn: [[linkedin.com/in/putudiokenneta](https://www.linkedin.com/in/putu-dio-kenneta-09818440b/)]
 - 🐙 GitHub: [[github.com/PutuDio](https://github.com/PutuDio)]
 
+---
+
+## 📄 License
+
+This project is open-source and free to be used as an educational learning reference.
+
+---
+
+<p align="center">
+  <em>"Intelligence, vast as the night sky."</em><br/>
+  Crafted with ☕, multiple iterations, and a rock-solid, unified design system.
+</p>
 
 ```
 ```

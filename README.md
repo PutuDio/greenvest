@@ -1,6 +1,6 @@
 # GreenVest
 
-> **Sustainable Investment Platform** — Investasi cerdas yang menguntungkan sekaligus berdampak positif bagi bumi.
+> **Sustainable Investment Platform** — Smart investing that is highly profitable while driving a positive impact for the planet.
 
 ![GreenVest Preview](./preview.png)
 
@@ -8,116 +8,108 @@
 
 ## 🏷️ Tags
 
-`Fintech / ESG Platform` &nbsp; `Industri: Sustainable Finance` &nbsp; `Target: Investor Modern & Eco-conscious Users`
+`Fintech / ESG Platform` &nbsp; `Industry: Sustainable Finance` &nbsp; `Target: Modern Investors & Eco-conscious Users`
 
 ---
 
-## 📌 Tentang Project
+## 📌 About the Project
 
-**GreenVest** adalah landing page modern untuk platform investasi berbasis ESG (*Environmental, Social, Governance*) yang menggabungkan teknologi AI dengan sustainable finance.
+**GreenVest** is a modern landing page for an ESG (*Environmental, Social, Governance*) based investment platform that seamlessly combines AI technology with sustainable finance.
 
-Landing page ini dirancang dengan pendekatan visual **eco-premium modern** — memadukan nuansa natural, clean, dan professional untuk membangun rasa percaya kepada pengguna sejak pertama kali membuka halaman.
+This landing page is designed with an **eco-premium modern** visual approach — blending natural, clean, and professional nuances to build user trust from the very first glance.
 
-Project ini dibuat menggunakan:
+This project was built using:
 
 - **HTML5**
 - **Tailwind CSS CDN**
 - **Custom CSS**
 - **Vanilla JavaScript**
 
-Tanpa framework frontend tambahan dan tanpa build process.
+Without any additional frontend frameworks and zero build processes.
 
 ---
 
-## ❗ Masalah yang Diselesaikan
+## ❗ Problems Solved
 
-### 1. Platform Investasi ESG Terlihat Terlalu Rumit
+### 1. ESG Investment Platforms Seem Way Too Complex
+Many sustainable finance platforms look complicated and overly technical for beginner investors. Users often struggle to understand the actual benefits of ESG and how to get started.
 
-Banyak platform sustainable finance terlihat kompleks dan terlalu teknis bagi investor pemula. Pengguna sering kesulitan memahami manfaat ESG dan bagaimana cara memulai investasi.
+### 2. Difficulty Building Trust in New Financial Products
+In the fintech category, visual presentation heavily influences user trust. An ordinary landing page without a strong visual identity often fails to deliver a secure and professional impression.
 
-### 2. Sulit Membangun Trust di Produk Finansial Baru
+### 3. Financial Landing Pages Look Boring
+The majority of investment websites rely on generic layouts:
+- Corporate blue color schemes
+- Rigid data tables
+- Overly formal UI
 
-Dalam kategori fintech, tampilan visual sangat mempengaruhi tingkat kepercayaan pengguna. Landing page biasa tanpa identitas visual yang kuat sering gagal memberikan kesan aman dan profesional.
+As a result, the product becomes forgettable and lacks an emotional connection with the user.
 
-### 3. Landing Page Finansial Terlihat Membosankan
+### 4. Absence of Investment Impact Visualization
+Modern users don't just look for profit — they also want to know how their investments impact the environment. 
 
-Mayoritas website investasi menggunakan tampilan generik:
-- warna biru corporate
-- tabel kaku
-- UI terlalu formal
+However, many platforms fail to visualize:
+- ESG scores
+- Carbon offsets
+- Environmental impact
+- Sustainability metrics
 
-Akibatnya produk sulit diingat dan kurang memiliki emotional connection dengan pengguna.
+in a simple and engaging way.
 
-### 4. Tidak Ada Visualisasi Dampak Investasi
-
-Pengguna modern tidak hanya ingin profit — mereka juga ingin mengetahui dampak investasi mereka terhadap lingkungan.
-
-Namun banyak platform belum mampu memvisualisasikan:
-- ESG score
-- carbon offset
-- environmental impact
-- sustainability metrics
-
-dengan cara yang sederhana dan menarik.
-
-### 5. Conversion CTA Kurang Menonjol
-
-Landing page finansial sering terlalu fokus pada informasi teknis dan lupa mengarahkan pengguna untuk melakukan aksi seperti:
-- daftar akun
-- mulai investasi
-- konsultasi
-- mencoba demo
+### 5. Weak Conversion CTAs
+Financial landing pages often focus too heavily on technical information and forget to effectively guide users toward taking action, such as:
+- Registering an account
+- Starting an investment
+- Booking a consultation
+- Trying a demo
 
 ---
 
-## ✅ Solusi yang Diberikan
+## ✅ Solutions Provided
 
 ### Eco-Premium Design System
+GreenVest utilizes a combination of natural colors:
+- Forest green
+- Emerald
+- Cream
+- Soft gold
 
-GreenVest menggunakan kombinasi warna natural:
-- forest green
-- emerald
-- cream
-- soft gold
+to establish an impression that is:
+- Secure
+- Modern
+- Sustainable
+- Premium
 
-untuk menciptakan kesan:
-- aman
-- modern
-- sustainable
-- premium
-
-Seluruh halaman menggunakan konsistensi:
-- spacing
-- typography
-- radius
-- shadow
-- hover effect
-- animation timing
-
----
-
-### Sistem Interaksi Modern
-
-Landing page memiliki berbagai micro interaction modern:
-
-- fade-up scroll animation
-- hover card effect
-- glassmorphism navbar
-- accordion FAQ
-- animated pulse badge
-- modal authentication
-- smooth scrolling
-
-Semua dibuat menggunakan Vanilla JavaScript tanpa library eksternal.
+The entire page maintains strict consistency in:
+- Spacing
+- Typography
+- Border radius
+- Shadows
+- Hover effects
+- Animation timing
 
 ---
 
-### Struktur Landing Page yang Strategis
+### Modern Interaction System
+The landing page features various modern micro-interactions:
 
-Urutan section dirancang mengikuti conversion funnel modern:
+- Fade-up scroll animations
+- Hover card effects
+- Glassmorphism navbar
+- Accordion FAQ
+- Animated pulse badges
+- Authentication modal
+- Smooth scrolling
+
+All crafted using Vanilla JavaScript without any external libraries.
+
+---
+
+### Strategic Landing Page Structure
+The section order is deliberately designed to follow a modern conversion funnel:
 
 ```txt
-Navbar Sticky
+Sticky Navbar
    ↓
 Hero Section
    ↓
@@ -142,7 +134,7 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ## 🎨 Design Decisions
 
-| Aspek         | Keputusan                    | Alasan                 |
+| Aspect        | Decision                     | Reason                |
 | ------------- | ---------------------------- | ---------------------- |
 | Style         | Eco-premium modern           | Trust + sustainability |
 | Primary Color | Forest & Emerald             | Natural + fintech feel |
@@ -157,13 +149,13 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ## 🎨 Color Palette
 
-| Nama        | Hex       | Fungsi            |
+| Name        | Hex       | Function          |
 | ----------- | --------- | ----------------- |
-| Forest 900  | `#0B2016` | Background utama  |
-| Forest 700  | `#1A3D28` | Surface dark      |
-| Emerald 600 | `#1DB870` | CTA utama         |
+| Forest 900  | `#0B2016` | Main background   |
+| Forest 700  | `#1A3D28` | Dark surface      |
+| Emerald 600 | `#1DB870` | Primary CTA       |
 | Emerald 500 | `#3DC98C` | Accent            |
-| Cream 50    | `#FDFAF4` | Background terang |
+| Cream 50    | `#FDFAF4` | Light background  |
 | Gold 500    | `#C9A030` | Premium accent    |
 | Gray Text   | `#6B7280` | Secondary text    |
 
@@ -171,11 +163,11 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ## 🛠️ Tech Stack
 
-| Teknologi          | Penggunaan                          |
+| Technology         | Usage                               |
 | ------------------ | ----------------------------------- |
-| HTML5              | Struktur semantik halaman           |
+| HTML5              | Semantic page structure             |
 | Tailwind CSS CDN   | Utility styling                     |
-| Custom CSS         | Animation, glassmorphism, custom UI |
+| Custom CSS         | Animations, glassmorphism, custom UI|
 | Vanilla JavaScript | Modal, FAQ, mobile menu             |
 | Google Fonts       | Fraunces + Plus Jakarta Sans        |
 | CSS Grid & Flexbox | Responsive layout                   |
@@ -183,12 +175,12 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ---
 
-## ✨ Fitur Utama Landing Page
+## ✨ Key Features of the Landing Page
 
-* 🌱 ESG investment branding modern
+* 🌱 Modern ESG investment branding
 * 📊 Interactive portfolio dashboard preview
 * ✨ Scroll fade-up animation
-* 💳 Pricing section modern
+* 💳 Modern pricing section
 * 📱 Fully responsive layout
 * 📌 Sticky glassmorphism navbar
 * ❓ Interactive FAQ accordion
@@ -199,7 +191,7 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ---
 
-## 📁 Struktur File
+## 📁 File Structure
 
 ```txt
 greenvest/
@@ -214,7 +206,7 @@ greenvest/
 
 ## 🌐 Live Demo
 
-[🔗 [Lihat Live Demo](https://greenvest-lovat.vercel.app/)](#)
+[🔗 [View Live Demo](https://greenvest-lovat.vercel.app/)](#)
 
 ---
 

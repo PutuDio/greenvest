@@ -227,7 +227,6 @@ This project is open-source and free to be used as an educational learning refer
 ---
 
 <p align="center">
-  <em>"Intelligence, vast as the night sky."</em><br/>
   Crafted with ☕, multiple iterations, and a rock-solid, unified design system.
 </p>
 

@@ -96,40 +96,6 @@ Seluruh halaman menggunakan konsistensi:
 
 ---
 
-### Hero Section yang Fokus pada Emotional Trust
-
-Hero section dirancang untuk langsung menjawab:
-
-> "Kenapa saya harus investasi di GreenVest?"
-
-Dengan kombinasi:
-- headline besar
-- ESG positioning
-- AI recommendation statement
-- dashboard preview
-- trust indicators
-
-Pengguna langsung memahami value utama platform dalam beberapa detik pertama.
-
----
-
-### Dashboard Mockup Interaktif
-
-Alih-alih menggunakan screenshot statis, GreenVest menggunakan dashboard UI mockup berbasis HTML dan CSS untuk menampilkan:
-
-- portfolio growth
-- ESG score
-- CO₂ offset
-- investment metrics
-
-Hasilnya:
-- loading lebih ringan
-- lebih fleksibel
-- lebih modern
-- tetap terlihat realistis
-
----
-
 ### Sistem Interaksi Modern
 
 Landing page memiliki berbagai micro interaction modern:
@@ -233,38 +199,13 @@ Setiap section memiliki tujuan komunikasi yang spesifik.
 
 ---
 
-## 🚀 Cara Menjalankan
-
-```bash
-# Clone repository
-git clone https://github.com/username/greenvest.git
-
-# Masuk folder project
-cd greenvest
-
-# Jalankan langsung
-open greenvest.html
-
-# atau gunakan Live Server VS Code
-```
-
-Tidak membutuhkan:
-
-* npm install
-* build tools
-* framework setup
-
-Langsung jalan di browser.
-
----
-
 ## 📁 Struktur File
 
 ```txt
 greenvest/
-├── greenvest.html
-├── greenvest.css
-├── greenvest.js
+├── index.html
+├── style.css
+├── script.js
 ├── preview.png
 └── README.md
 ```
@@ -274,29 +215,6 @@ greenvest/
 ## 🌐 Live Demo
 
 [🔗 [Lihat Live Demo](https://greenvest-lovat.vercel.app/)](#)
-
-
----
-
-## 💡 Pelajaran dari Project Ini
-
-1. Visual trust sangat penting dalam produk finansial
-2. Sustainable branding bisa dibuat modern dan premium
-3. Tailwind + custom CSS sangat powerful untuk landing page
-4. Vanilla JavaScript masih sangat cukup untuk interaction modern
-5. Hierarki section menentukan conversion rate landing page
-
----
-
-## 📚 Inspirasi & Referensi
-
-| Brand  | Inspirasi            |
-| ------ | -------------------- |
-| Stripe | Fintech layout       |
-| Linear | Minimal interaction  |
-| Notion | Clean spacing        |
-| Apple  | Typography hierarchy |
-| Ramp   | Modern SaaS UI       |
 
 ---
 
@@ -308,23 +226,6 @@ greenvest/
 - 💼 LinkedIn: [[linkedin.com/in/putudiokenneta](https://www.linkedin.com/in/putu-dio-kenneta-09818440b/)]
 - 🐙 GitHub: [[github.com/PutuDio](https://github.com/PutuDio)]
 
-
----
-
-## ⭐ Penutup
-
-GreenVest bukan hanya sekadar landing page fintech biasa.
-
-Project ini dirancang untuk menunjukkan bagaimana:
-
-* visual design,
-* frontend interaction,
-* conversion strategy,
-* dan branding
-
-dapat digabungkan menjadi pengalaman web modern yang terasa profesional, terpercaya, dan memorable.
-
-Jika project ini membantu atau menginspirasi, jangan lupa ⭐ repository ini.
 
 ```
 ```

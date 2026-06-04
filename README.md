@@ -1,4 +1,4 @@
-# GreenVest
+# GreenVest (Frontend)
 
 > **Sustainable Investment Platform** — Smart investing that is highly profitable while driving a positive impact for the planet.
 
